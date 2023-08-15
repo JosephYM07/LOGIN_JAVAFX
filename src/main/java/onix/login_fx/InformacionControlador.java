@@ -61,7 +61,18 @@ public class InformacionControlador {
     private void cerrarSesion(ActionEvent event) {
         Stage currentStage = (Stage) mostrarnombres.getScene().getWindow();
         currentStage.close();
-        abrirVentanaInicioSesion();
+
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Inicio.fxml"));
+            Parent root = loader.load();
+
+            Stage stage = new Stage();
+            stage.initStyle(StageStyle.UNDECORATED);
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
