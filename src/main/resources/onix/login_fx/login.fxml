@@ -5,11 +5,11 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.onix.login_fx.LoginControlador">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="onix.login_fx.LoginControlador">
     <PasswordField fx:id="contrasenia" layoutX="184.0" layoutY="126.0" />
     <Label layoutX="101.0" layoutY="89.0" text="Correo" />
     <Label layoutX="101.0" layoutY="130.0" text="Contraseña" />
     <TextField fx:id="correoTextfield" layoutX="184.0" layoutY="85.0" />
     <Button fx:id="logearse" layoutX="101.0" layoutY="194.0" mnemonicParsing="false" text="Iniciar Sesión" onAction="#iniciarSesion" />
-    <Button fx:id="regresarInicio" layoutX="341.0" layoutY="194.0" mnemonicParsing="false" text="Regresar al inicio" />
+    <Button fx:id="regresarInicio" layoutX="341.0" layoutY="194.0" mnemonicParsing="false" text="Regresar al inicio" onAction="#regresarInicio" />
 </AnchorPane>

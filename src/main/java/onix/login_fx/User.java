@@ -1,4 +1,4 @@
-package com.onix.login_fx;
+package onix.login_fx;
 
 
 public class User {

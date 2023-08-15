@@ -1,4 +1,4 @@
-package com.onix.login_fx;
+package onix.login_fx;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -11,7 +11,7 @@ public class MainApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("inicio.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+        Scene scene = new Scene(fxmlLoader.load(), 500, 500);
         stage.setTitle("Onix");
         stage.setScene(scene);
         stage.show();

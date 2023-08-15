@@ -1,13 +1,23 @@
-package com.onix.login_fx;
+package onix.login_fx;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import org.w3c.dom.Node;
+import javafx.stage.Stage;
+import javafx.event.ActionEvent;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+
 
 import java.io.IOException;
 import java.sql.*;
@@ -19,6 +29,8 @@ public class LoginControlador {
     private TextField correoTextfield;
     @FXML
     private PasswordField contrasenia;
+    @FXML
+    private Button regresarInicio;
 
     @FXML
     private void iniciarSesion() {
@@ -29,6 +41,8 @@ public class LoginControlador {
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("informacion.fxml"));
                 AnchorPane root = loader.load();
+                InformacionControlador informacionControlador = loader.getController();
+                informacionControlador.inicializarInformacion(correo);
                 Scene scene = new Scene(root);
                 Stage stage = new Stage();
                 stage.setTitle("Información del Usuario");
@@ -48,7 +62,7 @@ public class LoginControlador {
     private boolean verificarCredenciales(String correo, String contraseña) {
         String url = "jdbc:mysql://localhost:3306/usuarios";
         String usuarioDB = "root";
-        String contraseñaDB = "Vodafone2002.";
+        String contraseñaDB = "SoaD1725.";
 
         try (Connection connection = DriverManager.getConnection(url, usuarioDB, contraseñaDB)) {
             String sql = "SELECT * FROM usuarios WHERE correo = ? AND contraseña = ?";
@@ -72,5 +86,21 @@ public class LoginControlador {
         alert.setHeaderText(null);
         alert.setContentText(mensaje);
         alert.showAndWait();
+    }
+
+    @FXML
+    private void regresarInicio() {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("inicio.fxml"));
+            Scene scene = new Scene(root);
+
+            // Obtener el Stage principal
+            Stage mainStage = (Stage) regresarInicio.getScene().getWindow();
+
+            // Cambiar la escena del Stage principal
+            mainStage.setScene(scene);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

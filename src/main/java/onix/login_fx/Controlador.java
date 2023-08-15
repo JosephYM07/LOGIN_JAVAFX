@@ -1,4 +1,4 @@
-package com.onix.login_fx;
+package onix.login_fx;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -54,4 +54,5 @@ public class Controlador {
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         stage.close();
     }
+
 }
