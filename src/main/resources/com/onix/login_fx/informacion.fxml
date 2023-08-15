@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.onix.login_fx.Controlador">
-    <Label layoutX="200.0" layoutY="99.0" text="Bienvenido"/>
+<AnchorPane prefHeight="500.0" prefWidth="809.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.onix.login_fx.Controlador">
+    <Label layoutX="247.0" layoutY="76.0" text="Bienvenido" />
+   <Label fx:id="mostrarnombres" layoutX="220.0" layoutY="120.0" prefHeight="21.0" prefWidth="149.0" />
+   <Label fx:id="mostrarcorreo" layoutX="226.0" layoutY="170.0" prefHeight="21.0" prefWidth="149.0" />
+   <Button fx:id="botonactualizardatos" layoutX="658.0" layoutY="419.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="107.0" text="Actualizar" />
+   <Button fx:id="botoncerrarsesion" layoutX="658.0" layoutY="361.0" mnemonicParsing="false" text="Cerrar sesion" />
+   <Label layoutX="125.0" layoutY="240.0" text="Actualizar datos" />
+   <Label layoutX="89.0" layoutY="281.0" prefHeight="21.0" prefWidth="107.0" text="Nombre" />
+   <Label layoutX="89.0" layoutY="319.0" prefHeight="21.0" prefWidth="106.0" text="Correo" />
+   <Label layoutX="89.0" layoutY="361.0" prefHeight="21.0" prefWidth="89.0" text="Contraseña" />
+   <TextField fx:id="ingresonombres" layoutX="191.0" layoutY="276.0" />
+   <TextField fx:id="ingresocorreo" layoutX="191.0" layoutY="314.0" promptText="example@example.com" />
+   <TextField fx:id="ingresocontraseña" layoutX="191.0" layoutY="356.0" />
+   <Button fx:id="botoneliminarcuenta" layoutX="658.0" layoutY="299.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="107.0" text="Eliminar cuenta" />
 </AnchorPane>

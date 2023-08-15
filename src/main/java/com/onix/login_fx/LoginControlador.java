@@ -48,7 +48,7 @@ public class LoginControlador {
     private boolean verificarCredenciales(String correo, String contraseña) {
         String url = "jdbc:mysql://localhost:3306/usuarios";
         String usuarioDB = "root";
-        String contraseñaDB = "SoaD1725.";
+        String contraseñaDB = "Vodafone2002.";
 
         try (Connection connection = DriverManager.getConnection(url, usuarioDB, contraseñaDB)) {
             String sql = "SELECT * FROM usuarios WHERE correo = ? AND contraseña = ?";
